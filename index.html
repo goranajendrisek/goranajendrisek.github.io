@@ -12,6 +12,126 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        /* =========================================
+           GLOBAL TYPOGRAPHY: Shades of Dark Blue
+           ========================================= */
+        body {
+            color: #334155 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #1e293b !important;
+        }
+
+        p,
+        li,
+        span {
+            color: #475569 !important;
+        }
+
+        a {
+            color: #1d4ed8 !important;
+        }
+
+        a:hover {
+            color: #1e3a8a !important;
+        }
+
+        .nav-menu a {
+            color: #1e293b !important;
+            font-weight: 700;
+        }
+
+        .nav-menu a:hover {
+            color: #1d4ed8 !important;
+        }
+
+        .logo {
+            color: #1e293b !important;
+        }
+
+        /* =========================================
+           Hero Section (Pale Blue Background)
+           ========================================= */
+        .hero {
+            background-color: #e1effe !important;
+            background-image: none !important;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .hero h2 {
+            color: #1e293b !important;
+        }
+
+        .hero h3 {
+            color: #334155 !important;
+        }
+
+        .hero p {
+            color: #475569 !important;
+        }
+
+        .btn-hero {
+            background-color: #1e293b !important;
+            color: #ffffff !important;
+            border: 2px solid #1e293b !important;
+            transition: all 0.3s ease;
+        }
+
+        .btn-hero:hover {
+            background-color: transparent !important;
+            color: #1e293b !important;
+        }
+
+        /* =========================================
+           Cards & Icons (Portfolio, What I Do)
+           ========================================= */
+        .card h3,
+        .portfolio-card h3 {
+            color: #1e293b !important;
+        }
+
+        .card p,
+        .portfolio-card p {
+            color: #475569 !important;
+        }
+
+        /* Restored classic blue color for "What I do" icons from your screenshot */
+        .what-i-do-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+            color: #386bb0 !important;
+        }
+
+        /* =========================================
+           Contact Section Fixes
+           ========================================= */
+        /* Make links and spans the exact same color */
+        .contact-item a,
+        .contact-item span {
+            color: #475569 !important;
+            /* Matches 'Milan, Italy' */
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-item i {
+            color: #386bb0 !important;
+            /* Match the icons to the 'What I do' section */
+        }
+
+        /* =========================================
+           Original Embedded Styles (Certificates)
+           ========================================= */
         .cert-container {
             display: flex;
             justify-content: center;
@@ -27,20 +147,21 @@
             min-width: 250px;
             max-width: 320px;
             background-color: #ffffff;
-            border: 1px solid #eaeaea;
+            border: 1px solid #cbd5e1;
             border-radius: 12px;
             padding: 30px 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 15px rgba(30, 41, 59, 0.05);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .cert-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 8px 25px rgba(29, 78, 216, 0.15);
+            border-color: #2563eb;
         }
 
         .cert-img-container {
@@ -62,7 +183,7 @@
 
         .cert-icon {
             font-size: 4.5rem;
-            color: #777;
+            color: #94a3b8;
             transition: color 0.3s ease;
         }
 
@@ -71,13 +192,14 @@
         }
 
         .cert-card:hover .cert-icon {
-            color: var(--primary-dark, #004E7C);
+            color: #1e293b;
         }
 
         .cert-text {
             margin: 0;
             font-size: 1rem;
             line-height: 1.5;
+            color: #334155 !important;
         }
     </style>
 </head>
@@ -111,13 +233,17 @@
 
             <div class="hero-text">
                 <h2>Gorana Jendrisek, PhD</h2>
-                <h3>Freelance Scientific & Medical Writer | PhD in Molecular Oncology | 7+ years of Experience in
-                    Research and Science Communication | Publications | Conference Materials</h3>
-                <p>I’m a freelance Scientific and Medical Writer with over 7 years of experience in biomedical research.
-                    I specialize in translating complex scientific data into clear, engaging, and accurate content.
-                    Combining strong analytical skills with attention to detail and a flexible approach, I support
-                    researchers, agencies, and healthcare brands in communicating their science with clarity and
-                    precision.</p>
+                <h3>Scientific & Medical Writer | PhD in Molecular Oncology | 7+ years of experience in Research and
+                    Science Communication | Publications | Conference Materials</h3>
+                <p>I am a Scientific and Medical Writer with over 7 years of experience in biomedical research. I
+                    specialize in translating complex scientific data into clear, engaging, and accurate content, as
+                    well as narratives for diverse audiences.
+
+                    With a deep specialization in molecular oncology, I combine rigorous analytical skills with a focus
+                    on making science relatable and impactful for the people it serves. My goal is to bridge the gap
+                    between academic complexity and accessible, compliant communication to ensure every scientific
+                    breakthrough reaches its audience with clarity and precision.
+                </p>
 
                 <div class="hero-buttons">
                     <a href="cv.pdf" target="_blank" class="btn btn-hero">Download CV (PDF)</a>
@@ -135,16 +261,17 @@
                 <h2>Portfolio</h2>
             </div>
             <div class="grid-2">
+
                 <a href="Clinical_pres.pdf" target="_blank" class="card portfolio-card">
                     <div class="card-preview">
                         <img src="Clinical_pres.jpg" alt="Clinical_pres">
                     </div>
-                    <h3>Clinical Slide Deck: Osimertinib plus Chemotherapy in EGFR-Mutated Advanced NSCLC
+                    <h3>Clinical Slide Deck: Survival with Osimertinib plus Chemotherapy in EGFR-Mutated Advanced NSCLC
                     </h3>
                     <p>As an independent portfolio project, I developed a comprehensive slide deck summarizing the
-                        results of the FLAURA2 Phase III randomized trial. I synthesized complex clinical data into
-                        clear, visually engaging slides to effectively communicate the treatment's efficacy and adverse
-                        effect profile.</p>
+                        FLAURA2 Phase III randomized trial. I synthesized complex clinical data into clear, visually
+                        engaging slides to effectively communicate both the treatment's efficacy and its adverse effect
+                        profile.</p>
                 </a>
 
                 <a href="https://link.springer.com/epdf/10.1007/s00018-025-06036-6?sharing_token=ZPy6T387lapKG3VLubJr6ve4RwlQNchNByi7wbcMAY7F9lazS7HCGLz17xwiubBzMzTWTzp36LosdyXEVx4-oOq-ASPoxNjmWd8jhOLOblPabnhJfSIMvks93nAgX5XYtZGjjtGX0qx7g7s8kX5407zuyoUBCFpywhR1-HRtdgs%3D"
@@ -153,9 +280,11 @@
                         <img src="springer-preview.png" alt="Springer Paper Preview">
                     </div>
                     <h3>Publication: Beyond the membrane: rethinking EGFR signaling in physiology and cancer</h3>
-                    <p>In this first-author publication, I led the writing, peer review, and submission processes. I
-                        performed rigorous evidence synthesis across multiple papers to reconcile scientific
-                        discrepancies and revised the full text and technical figures for final publication.</p>
+                    <p>As first author, I led the review in which we explored how EGFR integrates biochemical and
+                        mechanical signals to
+                        inform future cancer therapies. I led the writing and submission processes, performing rigorous
+                        evidence synthesis to clarify conflicting data and revising the complete text for final
+                        publication.</p>
                 </a>
 
                 <a href="https://www.nature.com/articles/s41467-024-49543-z.epdf?sharing_token=_036nwAHZHawEh74PONO4tRgN0jAjWel9jnR3ZoTv0N9e303be7CfYwrsSxenjPWu7K9mXsLa_tx5ARb-TF6IJiraEMK6JW2lmACjRhCkba7bBO0qy7XPfF2k961oR3K9WiRDW5xs0g8Wcl1Y-MyCdAiHcsm95_4GKfKxesDI3g%3D"
@@ -165,9 +294,10 @@
                     </div>
                     <h3>Publication: A tripartite organelle platform links growth factor receptor signaling to
                         mitochondrial metabolism</h3>
-                    <p>This study advanced the understanding of the molecular mechanisms behind EGFR non-clathrin
-                        endocytosis. As part of my PhD research, I performed experiments demonstrating that the
-                        non-clathrin pathway's impact extends beyond EGFR to other receptors like MET.</p>
+                    <p>This impactful study advanced our understanding of the molecular mechanisms behind EGFR
+                        non-clathrin endocytosis. As part of my PhD research, I designed and performed experiments
+                        demonstrating that the non-clathrin pathway's physiological impact extends beyond EGFR to other
+                        receptors like MET.</p>
                 </a>
 
                 <a href="https://scindeks-clanci.ceon.rs/data/pdf/1450-9636/2022/1450-96362244115J.pdf" target="_blank"
@@ -177,10 +307,10 @@
                     </div>
                     <h3>Publication: Inflammatory modulation of the response of bronchial epithelial cells to
                         lipopolysaccharide with pretreatment by montelukast</h3>
-                    <p>During my Master's project, I investigated whether montelukast pretreatment modulates
+                    <p>During my Master's project, I investigated whether montelukast pretreatment effectively modulates
                         inflammatory responses in bronchial cells. As first author, I led the experimental work,
-                        writing, and editing, overseeing the peer-review process until publication in a scientific
-                        journal.</p>
+                        drafting, and editing, actively overseeing the rigorous peer-review process until its successful
+                        publication in a scientific journal.</p>
                 </a>
 
                 <a href="https://febs-iubmb-enableconference.org/wp-content/uploads/2023/02/milan_2021_newsletter.pdf"
@@ -188,25 +318,24 @@
                     <div class="card-preview">
                         <img src="enable_preview.png" alt="FEBS-IUBMB Enable Preview">
                     </div>
-                    <h3>Conference Support & Coverage: The 4th ENABLE European PhD and Postdoc symposium 2021 Milan</h3>
-                    <p> As a member of the Scientific Organizing Committee, I contributed to the event's organization:
-                        from choosing the theme to finalizing the official conference newsletter. Trained by the science
-                        communications agency Scienseed, I collaborated closely with their team to manage digital
-                        content, applying their strategic guidance and graphic assets to execute successful website and
-                        social media campaigns. </p>
+                    <h3>Conference Support & Coverage: The 4th ENABLE European PhD and Postdoc Symposium 2021, Milan
+                    </h3>
+                    <p>As a Scientific Organizing Committee member, I contributed to event organization, from theme
+                        selection to newsletter finalization. Trained by the Scienseed agency, I collaborated to manage
+                        digital content, applying their strategic guidance and graphic assets to execute successful web
+                        and social media campaigns.</p>
                 </a>
-
 
                 <a href="https://www.linkedin.com/posts/airc-fondazione-per-la-ricerca-sul-cancro_ferrarelle-societ%C3%A0-benefit-attraverso-il-activity-6988393970284281857-b2EP/?originalSubdomain=it"
                     target="_blank" class="card portfolio-card">
                     <div class="card-preview">
                         <img src="airc_preview1.png" alt="AIRC">
                     </div>
-                    <h3>Proposal writing: 3-year AIRC fellowship</h3>
-                    <p>I wrote a competitive 5-page research proposal and secured a 3-year AIRC fellowship funded by
-                        "Acqua Vitasnella", focusing on cancer impact. The proposal featured a detailed research plan,
-                        Gantt chart with milestones, and contingency strategies based on preliminary data and
-                        established scientific references.</p>
+                    <h3>Proposal Writing: 3-year AIRC fellowship</h3>
+                    <p>I authored a competitive research proposal and successfully secured a 3-year AIRC fellowship
+                        focusing on cancer impact. The proposal featured a highly detailed research plan, milestone
+                        Gantt charts, and robust contingency strategies based on preliminary data and established
+                        scientific literature.</p>
                 </a>
 
                 <a href="https://bimls.bg.ac.rs/" target="_blank" class="card portfolio-card">
@@ -215,11 +344,12 @@
                     </div>
                     <h3>Event Coordination & Digital Support: Belgrade International Molecular Life Science Conference
                         for Students</h3>
-                    <p>As a member of the Organizing Committee, I managed attendee registration and provided direct
-                        support for participant inquiries. Furthermore, I maintained active digital communications by
+                    <p>As a core member of the Organizing Committee, I managed attendee registration and provided direct
+                        support for participant inquiries. Additionally, I maintained active digital communications by
                         updating the official conference website and social media channels to ensure a seamless event
-                        experience. </p>
+                        experience.</p>
                 </a>
+
             </div>
         </div>
     </section>
@@ -228,7 +358,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>What I do</h2>
-                <p style="text-align: center; max-width: 600px; margin: 0 auto 40px auto; color: var(--text-light);">
+                <p style="text-align: center; max-width: 600px; margin: 0 auto 40px auto;">
                     Translating complex data into compelling, accurate, and audience-tailored scientific narratives.
                 </p>
             </div>
@@ -237,8 +367,7 @@
 
                 <div class="card" style="padding: 30px; text-align: left;">
                     <div style="text-align: center; margin-bottom: 25px;">
-                        <i class="fas fa-file-signature"
-                            style="font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; display: block;"></i>
+                        <i class="fas fa-file-signature what-i-do-icon"></i>
                         <h3 style="margin: 0; font-size: 1.3rem;">Scientific & Medical Writing</h3>
                     </div>
                     <ul class="skills-list">
@@ -251,8 +380,7 @@
 
                 <div class="card" style="padding: 30px; text-align: left;">
                     <div style="text-align: center; margin-bottom: 25px;">
-                        <i class="fas fa-chalkboard-user"
-                            style="font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; display: block;"></i>
+                        <i class="fas fa-chalkboard-user what-i-do-icon"></i>
                         <h3 style="margin: 0; font-size: 1.3rem;">Medical Communications</h3>
                     </div>
                     <ul class="skills-list">
@@ -265,8 +393,7 @@
 
                 <div class="card" style="padding: 30px; text-align: left;">
                     <div style="text-align: center; margin-bottom: 25px;">
-                        <i class="fas fa-spell-check"
-                            style="font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 15px; display: block;"></i>
+                        <i class="fas fa-spell-check what-i-do-icon"></i>
                         <h3 style="margin: 0; font-size: 1.3rem;">Editorial Support</h3>
                     </div>
                     <ul class="skills-list">
@@ -306,7 +433,7 @@
                     <div class="cert-img-container">
                         <i class="fas fa-microscope cert-icon"></i>
                     </div>
-                    <p class="cert-text"><strong>Public Engagement</strong><br>Volunteer for DNA Day & Researcher's
+                    <p class="cert-text"><strong>Public Engagement</strong><br>Volunteer for DNA Day & Researchers'
                         Night</p>
                 </div>
             </div>
