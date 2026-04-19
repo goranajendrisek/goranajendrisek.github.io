@@ -89,8 +89,25 @@
         }
 
         /* =========================================
-           Cards & Icons (Portfolio, What I Do)
+           Unified Card Hover Styles 
+           (Applies to Portfolio, What I do, and Credentials)
            ========================================= */
+        .card,
+        .portfolio-card,
+        .cert-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+        }
+
+        .card:hover,
+        .portfolio-card:hover,
+        .cert-card:hover {
+            transform: translateY(-5px) !important;
+            /* Matches the Dark Navy theme shadow */
+            box-shadow: 0 8px 25px rgba(30, 41, 59, 0.15) !important;
+            /* Consistent blue border on hover */
+            border-color: #386bb0 !important;
+        }
+
         .card h3,
         .portfolio-card h3 {
             color: #1e293b !important;
@@ -112,11 +129,9 @@
         /* =========================================
            Contact Section Fixes
            ========================================= */
-        /* Make links and spans the exact same color */
         .contact-item a,
         .contact-item span {
             color: #475569 !important;
-            /* Matches 'Milan, Italy' */
             text-decoration: none;
         }
 
@@ -126,11 +141,10 @@
 
         .contact-item i {
             color: #386bb0 !important;
-            /* Match the icons to the 'What I do' section */
         }
 
         /* =========================================
-           Original Embedded Styles (Certificates)
+           Certificates Section Specifics
            ========================================= */
         .cert-container {
             display: flex;
@@ -155,13 +169,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(29, 78, 216, 0.15);
-            border-color: #2563eb;
         }
 
         .cert-img-container {

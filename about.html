@@ -93,7 +93,7 @@
         }
 
         /* =========================================
-           Certificate Cards
+           Certificate Cards (Unified Hover Effect)
            ========================================= */
         .cert-container {
             display: flex;
@@ -118,13 +118,15 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
         }
 
         .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(29, 78, 216, 0.15);
-            border-color: #2563eb;
+            transform: translateY(-5px) !important;
+            /* Unified Shadow Effect */
+            box-shadow: 0 8px 25px rgba(30, 41, 59, 0.15) !important;
+            /* Unified Blue Border on hover */
+            border-color: #386bb0 !important;
         }
 
         .cert-img-container {
@@ -156,7 +158,6 @@
 
         .cert-card:hover .cert-icon {
             color: #1e293b;
-            /* Reverted to dark navy on hover */
         }
 
         .cert-text {
@@ -311,7 +312,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/gorana-jendrisek-a28783133/" target="_blank">LinkedIn
+                    <a href="https://www.linkedin.com/in/gorana-jendrisek/" target="_blank">LinkedIn
                         Profile</a>
                 </div>
                 <div class="contact-item">
